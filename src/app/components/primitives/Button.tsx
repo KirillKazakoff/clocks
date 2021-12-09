@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import { variant, VariantArgs } from 'styled-system';
-import { BoxProps } from './Box';
+import { BoxProps } from './rebassTypes';
 import { boxCompose } from './styledCompose';
 
 type ButtonProps = BoxProps &

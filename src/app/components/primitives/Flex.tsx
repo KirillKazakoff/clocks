@@ -1,25 +1,10 @@
-import React from 'react';
-import {
-    FlexboxProps as FlexPropsSystem,
-    compose,
-    space,
-    layout,
-    color,
-    typography,
-    flexbox,
-    border,
-    BorderProps,
-} from 'styled-system';
-
 import styled from 'styled-components';
-import { BoxProps } from './Box';
+import { FlexProps as FlexPropsRebass } from './rebassTypes';
 import { flexCompose } from './styledCompose';
 
-export type FlexProps = FlexPropsSystem &
-BoxProps & {
+export type FlexProps = FlexPropsRebass & {
     gap?: string;
     rowGap?: string;
-    as?: React.ElementType;
 };
 
 export const Flex = styled.div<FlexProps>`

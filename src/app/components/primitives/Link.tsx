@@ -1,10 +1,10 @@
 import styled from 'styled-components';
-import { TextProps } from './Text';
+import { LinkProps as LinkPropsRebass } from './rebassTypes';
 
 type LinkProps = {
     textDecoration?: string;
     cursor?: string;
-} & TextProps;
+} & LinkPropsRebass;
 
 const Link = styled.a<LinkProps>`
     ${({ textDecoration, cursor }) => ({

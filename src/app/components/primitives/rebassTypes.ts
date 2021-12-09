@@ -3,8 +3,6 @@ import * as React from 'react';
 import * as StyledComponents from 'styled-components';
 import * as StyledSystem from 'styled-system';
 
-export {};
-
 type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
 
 export interface BaseProps extends React.RefAttributes<any> {
@@ -44,6 +42,8 @@ interface BoxKnownProps
     StyledSystem.TypographyProps,
     StyledSystem.ColorProps,
     StyledSystem.FlexboxProps,
+    StyledSystem.PositionProps,
+    StyledSystem.BorderProps,
     SxProps {
     variant?: StyledSystem.ResponsiveValue<string> | undefined;
     tx?: string | undefined;
@@ -51,7 +51,6 @@ interface BoxKnownProps
 export interface BoxProps
     extends BoxKnownProps,
     Omit<React.HTMLProps<HTMLDivElement>, keyof BoxKnownProps> {}
-export const Box: React.FunctionComponent<BoxProps>;
 
 interface ButtonKnownProps
     extends BoxKnownProps,
@@ -60,40 +59,113 @@ interface ButtonKnownProps
 export interface ButtonProps
     extends ButtonKnownProps,
     Omit<React.HTMLProps<HTMLButtonElement>, keyof ButtonKnownProps> {}
-export const Button: React.FunctionComponent<ButtonProps>;
 
 export interface CardProps
     extends BoxKnownProps,
     Omit<React.HTMLProps<HTMLDivElement>, keyof BoxKnownProps> {}
-export const Card: React.FunctionComponent<CardProps>;
 
 // tslint:disable-next-line no-empty-interface
 interface FlexKnownProps extends BoxKnownProps {}
 export interface FlexProps
     extends FlexKnownProps,
     Omit<React.HTMLProps<HTMLDivElement>, keyof FlexKnownProps> {}
-export const Flex: React.FunctionComponent<FlexProps>;
 
 export interface ImageProps
     extends BoxKnownProps,
     Omit<React.HTMLProps<HTMLImageElement>, keyof BoxKnownProps> {}
-export const Image: React.FunctionComponent<ImageProps>;
 
 // tslint:disable-next-line no-empty-interface
 interface LinkKnownProps extends BoxKnownProps {}
 export interface LinkProps
     extends LinkKnownProps,
     Omit<React.HTMLProps<HTMLAnchorElement>, keyof LinkKnownProps> {}
-export const Link: React.FunctionComponent<LinkProps>;
 
 // tslint:disable-next-line no-empty-interface
 interface TextKnownProps extends BoxKnownProps {}
 export interface TextProps
     extends TextKnownProps,
     Omit<React.HTMLProps<HTMLDivElement>, keyof TextKnownProps> {}
-export const Text: React.FunctionComponent<TextProps>;
 
 export interface HeadingProps
     extends TextKnownProps,
     Omit<React.HTMLProps<HTMLHeadingElement>, keyof TextKnownProps> {}
-export const Heading: React.FunctionComponent<HeadingProps>;
+
+// import * as React from 'react';
+// import * as Rebass from 'rebass';
+// import * as StyledSystem from 'styled-system';
+
+// export {};
+
+// type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
+
+// interface BoxKnownProps
+//     extends Rebass.BaseProps,
+//         StyledSystem.SpaceProps,
+//         StyledSystem.LayoutProps,
+//         StyledSystem.FontSizeProps,
+//         StyledSystem.FontWeightProps,
+//         StyledSystem.ColorProps,
+//         StyledSystem.FlexProps,
+//         StyledSystem.OrderProps,
+//         StyledSystem.AlignSelfProps,
+//         Rebass.SxProps {
+//     variant?: StyledSystem.ResponsiveValue<string> | undefined;
+//     tx?: string | undefined;
+// }
+
+// interface LabelKnownProps
+//     extends BoxKnownProps,
+//         StyledSystem.FlexWrapProps,
+//         StyledSystem.FlexDirectionProps,
+//         StyledSystem.AlignItemsProps,
+//         StyledSystem.JustifyContentProps {}
+
+// export interface LabelProps
+//     extends LabelKnownProps,
+//         Omit<React.LabelHTMLAttributes<HTMLLabelElement>, keyof LabelKnownProps> {}
+
+// export const Label: React.ComponentType<LabelProps>;
+
+// export interface InputProps
+//     extends BoxKnownProps,
+//         Omit<React.InputHTMLAttributes<HTMLInputElement>, keyof BoxKnownProps> {}
+
+// export const Input: React.ComponentType<InputProps>;
+
+// export interface SelectProps
+//     extends BoxKnownProps,
+//         Omit<React.SelectHTMLAttributes<HTMLSelectElement>, keyof BoxKnownProps> {}
+
+// export const Select: React.ComponentType<SelectProps>;
+
+// export interface TextareaProps
+//     extends BoxKnownProps,
+//         Omit<React.TextareaHTMLAttributes<HTMLTextAreaElement>, keyof BoxKnownProps> {}
+
+// export const Textarea: React.ComponentType<TextareaProps>;
+
+// export interface RadioProps
+//     extends BoxKnownProps,
+//         Omit<React.InputHTMLAttributes<HTMLInputElement>, keyof BoxKnownProps> {}
+
+// export const Radio: React.ComponentType<RadioProps>;
+
+// export interface SliderProps
+//     extends BoxKnownProps,
+//         Omit<React.InputHTMLAttributes<HTMLInputElement>, keyof BoxKnownProps> {}
+
+// export const Slider: React.ComponentType<SliderProps>;
+
+// export interface CheckboxProps
+//     extends BoxKnownProps,
+//         Omit<React.InputHTMLAttributes<HTMLInputElement>, keyof BoxKnownProps> {}
+
+// export const Checkbox: React.ComponentType<CheckboxProps>;
+
+// export interface SwitchProps
+//     extends BoxKnownProps,
+//         Omit<React.ButtonHTMLAttributes<HTMLButtonElement>, keyof BoxKnownProps> {
+//     checked?: boolean | undefined;
+// }
+
+// export const Switch: React.ComponentType<SwitchProps>;

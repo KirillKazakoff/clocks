@@ -1,8 +1,11 @@
 import styled from 'styled-components';
-import { BoxProps, boxVariant } from './Box';
+import { boxVariant } from './Box';
+import { BoxProps } from './rebassTypes';
 import { boxCompose } from './styledCompose';
 
-const AbsoluteBox = styled.div<BoxProps>`
+type AbsoluteBoxType = BoxProps & { top?: number };
+
+const AbsoluteBox = styled.div<AbsoluteBoxType>`
     position: absolute;
     ${boxCompose()};
     ${boxVariant()};

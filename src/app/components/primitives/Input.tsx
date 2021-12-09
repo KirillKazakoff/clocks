@@ -1,9 +1,9 @@
 import styled from 'styled-components';
 import { variant } from 'styled-system';
 import { boxCompose } from './styledCompose';
-import { BoxProps } from './Box';
+import { BoxProps } from './rebassTypes';
 
-type InputProps = BoxProps & { variant?: 'primary' | 'secondary' };
+type InputProps = BoxProps;
 
 const Input = styled.input<InputProps>(
     variant({

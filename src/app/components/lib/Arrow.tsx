@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { BoxProps } from '../primitives/Box';
+import { BoxProps } from '../primitives/rebassTypes';
 import { boxCompose } from '../primitives/styledCompose';
 
 const arrowAnimation = (start: number) => keyframes`

@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 import { textCompose } from './styledCompose';
-import { TextProps } from './Text';
-
-type HeadingProps = TextProps & {};
+import { HeadingProps } from './rebassTypes';
 
 const Heading = styled.h2<HeadingProps>`
     ${textCompose()}

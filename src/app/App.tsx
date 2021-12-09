@@ -4,7 +4,6 @@ import { Box } from './components/primitives/Box';
 
 import Clock from './components/lib/Clock';
 import Ul from './components/primitives/Ul';
-// import { initClockListData } from './data/initClockList';
 import clockListInst from './logic/ClockList';
 import Li from './components/primitives/Li';
 
@@ -18,7 +17,7 @@ export default function App() {
             <Li key={item.id}>
                 <Clock
                     time={item.time} name={item.name}
-                    id={item.id}
+                    id={item.id} className='clock'
                 />
             </Li>
         );
@@ -27,10 +26,13 @@ export default function App() {
     const onUlClick = (e: React.SyntheticEvent) => {
         const target = e.target as HTMLElement;
 
-        console.log(target.id);
         if (target.id === 'remove') {
-            clockListInst.removeClock(target.id);
-            setClockListData(clockListInst.getData());
+            const id = target.closest('.clock')?.id;
+
+            if (typeof id === 'string') {
+                clockListInst.removeClock(id);
+                setClockListData(clockListInst.getData());
+            }
         }
     };
 

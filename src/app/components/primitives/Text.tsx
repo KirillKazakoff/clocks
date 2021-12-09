@@ -1,8 +1,8 @@
+/* eslint-disable import/prefer-default-export */
 import styled from 'styled-components';
-import { SpaceProps, ColorProps, TypographyProps } from 'styled-system';
-import { textCompose } from './styledCompose';
 
-export type TextProps = SpaceProps & ColorProps & TypographyProps;
+import { textCompose } from './styledCompose';
+import { TextProps } from './rebassTypes';
 
 export const Text = styled.span<TextProps>`
     ${textCompose()};
