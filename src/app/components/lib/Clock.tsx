@@ -6,7 +6,6 @@ import { ClockDataType } from '../../data/initClockList';
 import AbsoluteBox from '../primitives/AbsoluteBox';
 import { Box } from '../primitives/Box';
 import { BoxProps } from '../primitives/rebassTypes';
-import { Flex } from '../primitives/Flex';
 import Heading from '../primitives/Heading';
 import { HourArrow, MinuteArrow, SecondArrow } from './Arrow';
 
@@ -31,8 +30,6 @@ const StyledClock = styled.div`
     }
 `;
 
-// type Overwrite<T, U> = Pick<T, Exclude<keyof T, keyof U>> & U;
-// type ClockProps = BoxProps & Overwrite<ClockDataType, { id?: string }>;
 type ClockProps = ClockDataType & BoxProps;
 
 const Clock = ({

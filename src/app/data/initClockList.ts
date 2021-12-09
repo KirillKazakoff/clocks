@@ -19,4 +19,4 @@ export const initClockListData = [
     },
 ];
 
-export type ClockDataType = typeof initClockListData[0] & { id?: string };
+export type ClockDataType = typeof initClockListData[0];
